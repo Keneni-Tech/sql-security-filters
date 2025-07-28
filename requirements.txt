@@ -1,0 +1,2 @@
+# No external dependencies required for now.
+# Future packages like click or pandas can be added here if needed.

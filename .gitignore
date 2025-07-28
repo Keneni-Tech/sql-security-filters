@@ -1,0 +1,19 @@
+# Python virtual environment
+kvenv/
+venv/
+
+# Byte-compiled / cache files
+__pycache__/
+*.py[cod]
+*.pyo
+
+# SQLite database files
+db/
+*.db
+
+# Logs
+*.log
+
+# System files
+.DS_Store
+Thumbs.db
