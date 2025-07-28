@@ -1,6 +1,6 @@
-> # SQL query Security Filters
+> SQL query Security Filters
 >
-> ## Purpose
+> Purpose
 >
 > This project provides a simple Python tool for analyzing login attempts and related security log data using SQLite and plain SQL files. It helps cybersecurity students, SOC analysts, and incident responders quickly filter and inspect activity such as:
 >
@@ -10,34 +10,34 @@
 >
 > By combining Python and SQL, it enables rapid, scriptable, and repeatable filtering of log data — useful for building automation skills and incident investigation playbooks.
 >
-> ## What `main.py` Does
+> What `main.py` Does
 >
 > 1.  Creates and populates a default SQLite database (`db/security.db`) from `schema.sql` if it does not already exist.
 > 2.  Connects to the database (default or user-provided).
 > 3.  Executes a SQL query file (default or user-provided) and prints the results to the console.
 >
-> ## How to Use
+> How to Use
 >
-> ### Run with defaults
+> Run with defaults
 >
 > python main.py
 >
 > - Database: `db/security.db` (created and populated from `schema.sql` on first run)
 > - Query: `queries/login_by_date.sql`
 >
-> ## Run with a custom database
+> Run with a custom database
 >
 > python main.py path/to/custom.db
 >
 > If `path/to/custom.db` does not exist, `main.py` will create it and initialize it with `schema.sql`.
 >
-> ## Run with a custom query
+> Run with a custom query
 >
 > python main.py queries/your_query.sql
 >
 > This uses the default database (`db/security.db`) and runs the specified SQL file.
 >
-> ## Run with both custom database and custom query
+> Run with both custom database and custom query
 >
 > python main.py path/to/custom.db queries/your_query.sql
 >
@@ -48,18 +48,18 @@
 >
 > If only one argument is provided, it may be either a `.db` or a `.sql` file.
 >
-> ## Project Structure
+> Project Structure
 >
 > .
 > ├── db/
-> │ └── security.db # Default SQLite database (auto-created on firstrun)
+> │ └── security.db Default SQLite database (auto-created on firstrun)
 > ├── queries/
-> │ ├── login_by_date.sql # Example/default query
-> │ └── ... # Add your own .sql files here
-> ├── schema.sql # Schema and seed data (used to initialize DB)
-> └── main.py # Entry point: creates DB (if missing) and runs a query
+> │ ├── login_by_date.sql Example/default query
+> │ └── ... Add your own .sql files here
+> ├── schema.sql Schema and seed data (used to initialize DB)
+> └── main.py Entry point: creates DB (if missing) and runs a query
 >
-> ## Why This Matters for Security Professionals
+> Why This Matters for Security Professionals
 >
 > Security teams frequently need to:
 >
@@ -74,7 +74,7 @@
 > - You need quick, reproducible queries
 > - You want lightweight tooling that does not depend on large platforms
 >
-> ## Example Output
+> Example Output
 >
 > [+] Using existing database at 'db/security.db'
 > [+] Running query from 'queries/login_by_date.sql'
@@ -84,12 +84,12 @@
 >
 > Note: Output format depends on the SQL you run.
 >
-> ## Requirements
+> Requirements
 >
 > - Python 3.6+
 > - No external packages required (uses the standard library `sqlite3`)
 >
-> ## Tips
+> Tips
 >
 > - Write new queries as separate `.sql` files in `queries/`.
 > - Edit `schema.sql` to simulate additional scenarios or tables.
@@ -100,7 +100,7 @@
 >
 > - To reset the default database during development, delete `db/security.db` and run `python main.py` again to recreate it from `schema.sql`.
 >
-> ## Contributing
+> Contributing
 >
 > Contributions are welcome. Feel free to submit pull requests for new queries, improved documentation, or additional features.
 >
